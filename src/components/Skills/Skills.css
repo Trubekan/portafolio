@@ -1,0 +1,167 @@
+.skills-section {
+  background: #0f0f10;
+}
+
+.skills-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 70px;
+}
+
+.skills-header h2 {
+  margin-bottom: 0;
+}
+
+.skills-header > p {
+  max-width: 390px;
+
+  color: #71717a;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.skills-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1px;
+
+  background: #27272a;
+
+  border: 1px solid #27272a;
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.skill-category {
+  min-height: 250px;
+
+  padding: 35px;
+
+  background: #0f0f10;
+
+  transition:
+    background 0.25s ease;
+}
+
+.skill-category:hover {
+  background: #141416;
+}
+
+.skill-category-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 35px;
+}
+
+.skill-category-number {
+  color: #8b5cf6;
+
+  font-family: monospace;
+
+  font-size: 11px;
+}
+
+.skill-category h3 {
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+/* =========================
+   SKILLS LIST
+========================= */
+
+.skill-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.skill-tag {
+  padding: 8px 11px;
+
+  border: 1px solid #27272a;
+
+  border-radius: 6px;
+
+  color: #a1a1aa;
+
+  font-size: 12px;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.skill-tag:hover {
+  color: #ffffff;
+
+  border-color: #8b5cf6;
+
+  background: rgba(
+    139,
+    92,
+    246,
+    0.08
+  );
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 750px) {
+  .skills-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 50px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+  .skill-category {
+    min-height: auto;
+
+    padding: 25px;
+  }
+
+  .skill-category-header {
+    margin-bottom: 25px;
+  }
+}

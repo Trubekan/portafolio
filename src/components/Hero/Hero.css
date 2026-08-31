@@ -1,0 +1,352 @@
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 140px 0 100px;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(139, 92, 246, 0.12),
+      transparent 30%
+    ),
+    #0a0a0a;
+}
+
+.hero-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(420px, 0.9fr);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+/* =========================
+   AVAILABILITY
+========================= */
+
+.availability {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 7px 12px;
+
+  margin-bottom: 25px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 100px;
+
+  color: #a1a1aa;
+
+  font-size: 12px;
+}
+
+.availability-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(34, 197, 94, 0.1);
+}
+
+/* =========================
+   HERO TEXT
+========================= */
+
+.hero-label {
+  margin-bottom: 18px;
+
+  color: #8b5cf6;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  margin-bottom: 28px;
+
+  font-size: clamp(64px, 8vw, 108px);
+
+  line-height: 0.9;
+
+  letter-spacing: -6px;
+}
+
+.hero h1 span {
+  color: #71717a;
+}
+
+.hero-description {
+  max-width: 620px;
+
+  margin-bottom: 34px;
+
+  color: #a1a1aa;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social-links {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 22px;
+}
+
+.social-links a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #71717a;
+
+  font-size: 13px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   DEVELOPER CARD
+========================= */
+
+.hero-decoration {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.developer-card {
+  width: 100%;
+
+  max-width: 500px;
+
+  overflow: hidden;
+
+  border: 1px solid #27272a;
+
+  border-radius: 14px;
+
+  background: #111113;
+
+  box-shadow:
+    0 30px 80px
+    rgba(0, 0, 0, 0.45);
+}
+
+.developer-card-header {
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 18px;
+
+  border-bottom: 1px solid #27272a;
+
+  color: #71717a;
+
+  font-family: monospace;
+
+  font-size: 12px;
+}
+
+.window-dots {
+  display: flex;
+
+  gap: 6px;
+}
+
+.window-dots span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #3f3f46;
+}
+
+/* =========================
+   CODE
+========================= */
+
+.developer-code {
+  padding: 28px;
+
+  color: #d4d4d8;
+
+  font-family:
+    'Courier New',
+    monospace;
+
+  font-size: 13px;
+
+  line-height: 2;
+}
+
+.code-indent {
+  padding-left: 22px;
+}
+
+.code-purple {
+  color: #c084fc;
+}
+
+.code-blue {
+  color: #60a5fa;
+}
+
+.code-green {
+  color: #86efac;
+}
+
+.code-white {
+  color: #f4f4f5;
+}
+
+/* =========================
+   CARD FOOTER
+========================= */
+
+.developer-card-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 14px 18px;
+
+  border-top: 1px solid #27272a;
+
+  color: #71717a;
+
+  font-size: 11px;
+
+  font-family: monospace;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .hero-decoration {
+    justify-content: flex-start;
+  }
+
+  .developer-card {
+    max-width: 650px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero h1 {
+    font-size: 64px;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .developer-code {
+    padding: 20px;
+
+    font-size: 10px;
+
+    overflow-x: auto;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+}
